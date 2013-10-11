@@ -1,0 +1,41 @@
+name: GroupChat
+author: Schmoller
+
+version: 1.0.0
+
+main: au.com.mineauz.groupchat.GroupChat
+
+softdepend: [Essentials]
+
+commands:
+  groupchat:
+    aliases: [gchat, chat]
+    
+permissions:
+  groupchat.join:
+    default: true
+  groupchat.join.force:
+    default: op
+    children:
+      groupchat.join: true
+  groupchat.invite:
+    default: true
+  groupchat.invite.force:
+    default: op
+    children:
+      groupchat.invite: true
+  groupchat.allowdeny:
+    default: true
+  groupchat.see:
+    default: true
+  groupchat.who:
+    default: true
+  groupchat.kick:
+    default: true
+  groupchat.who.others:
+    default: op
+    children:
+      groupchat.who: true
+  groupochat.override.groups-see:
+    default: false
+    description: Anything players with this permission say in chat will always shown to members in group chat regardless of whether they have see on or not  
